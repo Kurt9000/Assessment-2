@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wuthering Waves - Main Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+      color: #ffffff;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #1a1a1a;
+      padding: 16px;
+    }
+
+    nav a {
+      color: #00e0ff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    header {
+      text-align: center;
+      padding: 32px 16px;
+    }
+
+    .video-wrapper {
+      width: 480px;
+      height: 240px;
+      margin: auto;
+      background-image: url('Images/Thumbnail.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      opacity: 0.9;
+    }
+
+    .video-button {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 2px solid #00e0ff;
+      color: #ffffff;
+      font-size: 32px;
+      line-height: 100px;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    .video-button:hover {
+      box-shadow: 0 0 12px #00e0ff;
+      background-color: rgba(0, 224, 255, 0.05);
+    }
+
+    .characters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      padding: 32px;
+    }
+
+    .character {
+      width: 270px;
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .character:hover {
+      box-shadow: 0 0 20px #F5F5F5;
+    }
+
+    .character img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      filter: brightness(0.7);
+      transition: filter 0.3s;
+      cursor: pointer;
+    }
+
+    .character:hover img {
+      filter: brightness(1);
+    }
+
+    .info {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 8px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    .character:hover .info {
+      opacity: 1;
+      max-height: 100px;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 20px #F5F5F5;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .lightbox.show {
+      display: flex;
+    }
+
+    .video-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-section video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .video-section.visible video {
+      opacity: 1;
+    }
+
+    .video-section.fade-out video {
+      opacity: 0;
+    }
+
+    .video-section h2 {
+      display: none;
+    }
+
+    .game-description {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: justify;
+      line-height: 1.6;
+	  font-size: 24px
+    }
+
+    .game-description h2 {
+      color: #00e0ff;
+      margin-bottom: 16px;
+	  text-align: center;
+    }
+	
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="Main.html">Main Page</a>
+    <a href="Banners.html">Banners</a>
+    <a href="Events.html">Events</a>
+    <a href="Patches.html">Patch Notes</a>
+    <a href="Materials.html">Character Materials</a>
+  </nav>
+
+  <header>
+    <h1>Welcome to Wuthering Waves</h1>
+    <p>Explore the world, characters, events, and more.</p>
+    <div class="video-wrapper">
+      <a href="https://www.youtube.com/watch?v=6tZfkFCz6qI" target="_blank" class="video-button">▶</a>
+    </div>
+  </header>
+
+  <section class="characters">
+    <div class="character">
+      <img src="Images/Zani.jpeg" alt="Zani" />
+      <div class="info"><strong>Zani</strong><br>Element: Spectro<br>Weapon: Gauntlets</div>
+    </div>
+    <div class="character">
+      <img src="Images/Yinlin.jpeg" alt="Yinlin" />
+      <div class="info"><strong>Yinlin</strong><br>Element: Electro<br>Weapon: Rectifier</div>
+    </div>
+    <div class="character">
+      <img src="Images/Phoebe.jpeg" alt="Phoebe" />
+      <div class="info"><strong>Phoebe</strong><br>Element: Spectro<br>Weapon: Rectifier</div>
+    </div>
+    <div class="character">
+      <img src="Images/Jiyan.jpeg" alt="Jiyan" />
+      <div class="info"><strong>Jiyan</strong><br>Element: Aero<br>Weapon: Broadblade</div>
+    </div>
+    <div class="character">
+      <img src="Images/Zhezhi.jpeg" alt="Zhezhi" />
+      <div class="info"><strong>Zhezhi</strong><br>Element: Glacio<br>Weapon: Rectifier</div>
+    </div>
+    <div class="character">
+      <img src="Images/Xiangli yao.jpeg" alt="Xiangli Yao" />
+      <div class="info"><strong>Xiangli Yao</strong><br>Element: Electro<br>Weapon: Gauntlets</div>
+    </div>
+  </section>
+
+  <section class="game-description">
+   <h2>About Wuthering Waves</h2>
+    <p>
+      <strong>Wuthering Waves</strong> is a visually stunning, narrative-driven action RPG set in a post-apocalyptic world 
+      where civilization is rebuilding after a mysterious disaster known as the “Lament.” Players take on the role of 
+      Rovers, explorers with unique powers who awaken with no memories, and must uncover the secrets of the world and 
+      their own identities.
+    </p>
+    <p>
+      The game features fast-paced combat with fluid combo mechanics, character-switching, and special resonance skills. 
+      Players can collect and build a team of distinct characters, each with their own backstories, elemental affinities, 
+      and weapons. The open world offers vertical exploration, dynamic environments, and a rich lore woven into every 
+      region and quest.
+    </p>
+    <p>
+      Developed by Kuro Game, known for the acclaimed title <em>Punishing: Gray Raven</em>, Wuthering Waves blends gorgeous 
+      anime-style visuals with a deep and immersive gameplay experience that rewards both exploration and mastery of 
+      combat mechanics.
+    </p>
+  </section>
+  
+  <section class="video-section" id="video">
+    <h2>Intro Gameplay Video</h2>
+    <video autoplay loop muted playsinline preload="auto">
+      <source src="video/bgv.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Enlarged Image" />
+  </div>
+ 
+  <script>
+    const videoSection = document.getElementById('video');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          videoSection.classList.add('visible');
+          videoSection.classList.remove('fade-out');
+        } else {
+          videoSection.classList.remove('visible');
+          videoSection.classList.add('fade-out');
+        }
+      });
+    }, { threshold: 0.4 });
+
+    observer.observe(videoSection);
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const characterImages = document.querySelectorAll('.character img');
+
+    characterImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('show');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+      lightboxImg.src = '';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Limited Events - Wuthering Waves</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 16px;
+}
+
+nav a {
+  color: #00e0ff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 32px; 
+}
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px; 
+}
+
+.event {
+  background: #2b2b2b;
+  border-left: 5px solid #00e0ff;
+  margin: 24px;
+  border-radius: 8px;
+  width: 80%;
+  height: 220px; 
+  display: flex;
+  align-items: stretch;
+}
+
+.event img {
+  width: 220px; 
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+}
+
+.event-content {
+  flex: 1;
+  padding: 24px;
+  font-size: 18px;  
+}
+
+.event h2 {
+  margin-top: 0;
+  color: #00e0ff;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}  
+
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: none;
+  width: auto;
+  height: auto;
+  box-shadow: 0 0 20px #FFFFFF;
+  border-radius: 10px;
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="Main.html">Main Page</a>
+    <a href="Banners.html">Banners</a>
+    <a href="Events.html">Events</a>
+    <a href="Patches.html">Patch Notes</a>
+    <a href="Materials.html">Character Materials</a>
+  </nav>
+<h1>Current Limited Events</h1>
+
+    <div class="events-container">
+        <div class="event">
+            <img src="event/log.jpeg" alt="Login Event">
+            <div class="event-content">
+                <h2>Special Limited-Time Login Event</h2>
+                <p><strong>Duration:</strong> April 25, 2025 – June 11, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/br.jpeg" alt="Battle Rush">
+            <div class="event-content">
+                <h2>Wuthering Waves Battle Rush</h2>
+                <p><strong>Duration:</strong> April 28, 2025 – June 2, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/fce.jpeg" alt="Fiery Arpeggio">
+            <div class="event-content">
+                <h2>Fan Creation Event: Fiery Arpeggio of Summer Reunion</h2>
+                <p><strong>Duration:</strong> April 28, 2025 – May 28, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/td.jpeg" alt="Twitch Drops">
+            <div class="event-content">
+                <h2>Twitch Drops</h2>
+                <p><strong>Duration:</strong> April 29, 2025 – May 26, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/ccnc.jpeg" alt="Cube Event">
+            <div class="event-content">
+                <h2>Cube, Cubic n Cubie</h2>
+                <p><strong>Duration:</strong> April 29, 2025 – June 11, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/cd.jpeg" alt="Cubie Derby Warmup">
+            <div class="event-content">
+                <h2>Cubie Derby: Warmup</h2>
+                <p><strong>Duration:</strong> April 29, 2025 – June 11, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/ggr.jpeg" alt="Gifts of Grand Reunion">
+            <div class="event-content">
+                <h2>Gifts of Grand Reunion</h2>
+                <p><strong>Duration:</strong> April 29, 2025 – June 11, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/gn.jpeg" alt="Gilded Nightmarket">
+            <div class="event-content">
+                <h2>Gilded Nightmarket</h2>
+                <p><strong>Duration:</strong> April 29, 2025 – June 11, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/mt.jpeg" alt="Memory Travelogue">
+            <div class="event-content">
+                <h2>Memory Travelogue</h2>
+                <p><strong>Duration:</strong> April 29, 2025 – June 11, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/pd.jpeg" alt="Pioneer Podcast">
+            <div class="event-content">
+                <h2>Pioneer Podcast</h2>
+                <p><strong>Duration:</strong> April 29, 2025 – June 11, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/cr.jpeg" alt="Carnevale Time">
+            <div class="event-content">
+                <h2>It's Carnevale Time!</h2>
+                <p><strong>Duration:</strong> April 29, 2025 – June 11, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/rs.jpeg" alt="Resounding Waves">
+            <div class="event-content">
+                <h2>Resounding Waves</h2>
+                <p><strong>Duration:</strong> April 29, 2025 – July 23, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/tp.jpeg" alt="Tidal Photography">
+            <div class="event-content">
+                <h2>Tidal Photography</h2>
+                <p><strong>Duration:</strong> April 29, 2025 – June 11, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/z.jpeg" alt="Zani Workday">
+            <div class="event-content">
+                <h2>Wrap Up Your Workday with Zani!</h2>
+                <p><strong>Duration:</strong> May 13, 2025 – May 20, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/cd.jpeg" alt="Cubie Derby">
+            <div class="event-content">
+                <h2>Cubie Derby</h2>
+                <p><strong>Duration:</strong> May 14, 2025 – May 26, 2025</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="event/ert.jpeg" alt="Reciprocal Tides">
+            <div class="event-content">
+                <h2>Echoes of Reciprocal Tides</h2>
+                <p><strong>Duration:</strong> May 14, 2025 – Ongoing</p>
+			
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Enlarged Image">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const eventImages = document.querySelectorAll('.event img');
+
+    eventImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('show');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+      lightboxImg.src = '';
+    });
+  </script>
+</body>
+</html>
